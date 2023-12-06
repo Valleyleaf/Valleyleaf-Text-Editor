@@ -22,7 +22,32 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE'
       }),
-     
+      //Above redirects to index.html on start.
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }),
+      //Above adds service worker. Make sure Service worker... works.
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Valleyleaf Text Editor',
+        short_name: 'Valleyleaf Text Editor',
+        description: 'Just another text editor',
+        background_color: '#black',
+        theme_color: '#225ac3',
+        start_url: './',
+        publicPath: './',
+        // puts the icons into the asset folder under the dist folder
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+          //Above adds icons to cache
+        ],
+      }),
     ],
 
     module: {

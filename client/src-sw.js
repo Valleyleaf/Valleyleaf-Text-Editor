@@ -22,13 +22,16 @@ const pageCache = new CacheFirst({
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
-});
+
+}, console.log('warmStrategyCache hit'));
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 registerRoute(
-  ({request}) => ['style', 'script', 'worker', 'img'].includes(request.destination),
+  ({request}) => 
+  console.log('RegisterRoute function activated')
+  ['style', 'script', 'worker', 'img'].includes(request.destination),
   new offlineFallback({
     cacheName: 'asset-cache',
     plugins: [
