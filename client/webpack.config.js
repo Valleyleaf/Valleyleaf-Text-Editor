@@ -34,7 +34,7 @@ module.exports = () => {
         name: 'Valleyleaf Text Editor',
         short_name: 'Valleyleaf Text Editor',
         description: 'Just another text editor',
-        background_color: '#black',
+        background_color: '#225ca3',
         theme_color: '#225ac3',
         start_url: './',
         publicPath: './',
