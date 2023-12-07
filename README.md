@@ -1,18 +1,34 @@
-# Valleyleaf-Text-Editor
+# Text Editor /w Downloadable app
 
-TODO LIST:
--Ensure Package.json is correct
-*Webpack
-*Express
-*mongo?
+## 📝licence
+![Github license](https://img.shields.io/badge/license-MIT,-green.svg)
 
--Fix src-sw.js
-Need to figure out how to cache assets. Asset is logo.
+## ✨Table of Contents
+* [Description](#Description)
+* [Installation](#Installation)
+* [Dependancies](#Dependancies)
+* [Usage](#Usage)
+* [licence](#licence)
+* [Questions](#Questions)
+
+## 💻Description
+This is a basic text editor, deployed using Heroku. Additionally, it has the optionf to download a local app.
+
+## 🚨Installation
+Run in a browser of your choice, or install locally.
+
+## ✅Dependancies
+Node.js
+MongoDB
+mongoose
+workbox
+webPack
 
 
--Finish install.js
-This looks to consist mostly of event handlers that need to be finished. Refer to mini-project
 
+## 👤Questions
+Find me at https://github.com/Valleyleaf or reach out to me
+at: valleyleaf@gmail.com
 
--Complete Database
-Looks to be the meat and potatoes of the project. Ensure you read into this.
+## 🤝How to Contribute
+Feel free to build upon this code. It's basic and can use a 

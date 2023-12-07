@@ -23,14 +23,13 @@ warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
 
-}, console.log('warmStrategyCache hit'));
+});
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+//Below caches style sheets, scripts, our service worker and images.
 registerRoute(
   ({request}) => 
-  console.log('RegisterRoute function activated')
   ['style', 'script', 'worker', 'img'].includes(request.destination),
   new offlineFallback({
     cacheName: 'asset-cache',
@@ -42,4 +41,3 @@ registerRoute(
   })
 );
 
-// Is using offlineFallback redundant? If so, why is it here. To create another function? Seems weird.
